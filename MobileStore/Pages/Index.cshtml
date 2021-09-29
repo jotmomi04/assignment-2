@@ -1,0 +1,46 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+   <p><em>The Latest  Iphone Version</em></p>
+   
+</div>
+@{
+    var Latest_Iphone_Models = new[]{
+        new{
+            Model="Iphone 13 plus",
+            Price="2000$",
+            Size="6 inches",
+        },
+        new{
+            Model="Iphone 13",
+            Price="1300$",
+            Size="6 inches",
+        },
+        new{
+            Model="Iphone 13 mini",
+            Price="1000$",
+            Size="5.5 inches",
+        },
+        new{
+            Model="I phone 12 pro max",
+            Price="1500$",
+            Size="6.2 inches",
+        },
+        new{
+            Model="Iphone 12 pro",
+            Price="1200$",
+            Size="6.0 inches",
+        }
+    };
+}
+@for (var i = 0; i <Latest_Iphone_Models.Length; i++)
+{
+    var models =Latest_Iphone_Models[i];
+    <text> Latest Model:<strong>@models.Model  <br/> </strong> </text>
+    <text>Price:@models.Price <br></text>
+    <text>Screen Size:@models.Size <br></text> }
