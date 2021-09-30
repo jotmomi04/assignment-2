@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\2nd trem\\asp.net\\assignment 2\\MobileStore\\MobileStore\\MobileStore.csproj": {}
+    "D:\\2nd trem\\asp.net\\assignment 2\\MobileStore\\assignment-2\\MobileStore\\MobileStore.csproj": {}
   },
   "projects": {
-    "D:\\2nd trem\\asp.net\\assignment 2\\MobileStore\\MobileStore\\MobileStore.csproj": {
+    "D:\\2nd trem\\asp.net\\assignment 2\\MobileStore\\assignment-2\\MobileStore\\MobileStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2nd trem\\asp.net\\assignment 2\\MobileStore\\MobileStore\\MobileStore.csproj",
+        "projectUniqueName": "D:\\2nd trem\\asp.net\\assignment 2\\MobileStore\\assignment-2\\MobileStore\\MobileStore.csproj",
         "projectName": "MobileStore",
-        "projectPath": "D:\\2nd trem\\asp.net\\assignment 2\\MobileStore\\MobileStore\\MobileStore.csproj",
+        "projectPath": "D:\\2nd trem\\asp.net\\assignment 2\\MobileStore\\assignment-2\\MobileStore\\MobileStore.csproj",
         "packagesPath": "C:\\Users\\Harminder\\.nuget\\packages\\",
-        "outputPath": "D:\\2nd trem\\asp.net\\assignment 2\\MobileStore\\MobileStore\\obj\\",
+        "outputPath": "D:\\2nd trem\\asp.net\\assignment 2\\MobileStore\\assignment-2\\MobileStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Harminder\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,26 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SQLite": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

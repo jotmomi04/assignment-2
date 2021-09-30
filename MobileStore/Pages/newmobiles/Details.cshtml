@@ -1,0 +1,43 @@
+@page
+@model MobileStore.Pages_newmobiles.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>NewMobiles</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NewMobiles.Model)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NewMobiles.Model)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NewMobiles.ReleaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NewMobiles.ReleaseDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NewMobiles.Proccesor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NewMobiles.Proccesor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NewMobiles.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NewMobiles.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.NewMobiles.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
