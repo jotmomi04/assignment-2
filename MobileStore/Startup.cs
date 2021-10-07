@@ -11,46 +11,44 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MobileStore
 {
-    public class Startup
+  public class Startup
+{
+    public Startup(IConfiguration configuration, IWebHostEnvironment env)
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddRazorPages();
-
-            services.AddDbContext<newMobilesContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("newMobilesContext")));
-        }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-            }
-
-            app.UseStaticFiles();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapRazorPages();
-            });
-        }
+        Environment = env;
+        Configuration = configuration;
     }
+
+    public IConfiguration Configuration { get; }
+    public IWebHostEnvironment Environment { get; }
+
+  public void ConfigureServices(IServiceCollection services)
+{
+    services.AddRazorPages();
+
+    services.AddDbContext<newMobilesContext>(options =>
+        options.UseSqlite(Configuration.GetConnectionString("newMobilesContext")));
 }
+    public void Configure(IApplicationBuilder app)
+    {
+        if (Environment.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+        else
+        {
+            app.UseExceptionHandler("/Error");
+            app.UseHsts();
+        }
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.UseRouting();
+
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapRazorPages();
+        });
+    }
+}}
